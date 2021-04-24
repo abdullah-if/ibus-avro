@@ -1,22 +1,22 @@
 [GtkTemplate (ui="/ui/AvroPrefWindow.ui")]
 public class AvroPrefWindow : Gtk.ApplicationWindow {
 	[GtkChild]
-	public Gtk.Switch toggle_preview { get; set; }
+	public Gtk.Switch toggle_preview { get; }
 
 	[GtkChild]
-	public Gtk.Switch toggle_dict { get; set; }
+	public Gtk.Switch toggle_dict { get;  }
 
 	[GtkChild]
-	public Gtk.Switch toggle_newline { get; set; }
+	public Gtk.Switch toggle_newline { get;  }
 
 	[GtkChild]
-	public Gtk.Scale scale_lutable_size { get; set; }
+	public Gtk.Scale scale_lutable_size { get;  }
 
 	[GtkChild]
-	public Gtk.Adjustment adjust_lutable_size { get; set; }
+	public Gtk.Adjustment adjust_lutable_size { get;  }
 
 	[GtkChild]
-	public Gtk.ComboBoxText selection_lutable_orientation { get; set; }
+	public Gtk.ComboBoxText selection_lutable_orientation { get; }
 
 	internal AvroPrefWindow (AvroPrefApplication app) {
 		Object (application: app, title: "Avro Phonetic Beta Preferences");
@@ -31,7 +31,7 @@ public class AvroPrefWindow : Gtk.ApplicationWindow {
 		toggle_preview.notify["active"].connect(validate);
 		toggle_newline.notify["active"].connect(validate);
 		toggle_dict.notify["active"].connect(validate);
-		
+
 		validate();
 	}
 
