@@ -59,7 +59,7 @@ installdeb: all
 	${INSTALL} -m 644 avroregexlib.js $(DESTDIR)${pkgdatadir}/avroregexlib.js
 	${INSTALL} -m 644 suggestionbuilder.js $(DESTDIR)${pkgdatadir}/suggestionbuilder.js
 	${INSTALL} -m 644 levenshtein.js $(DESTDIR)${pkgdatadir}/levenshtein.js
-	${INSTALL} -m 644 ANSIconverter.js ${pkgdatadir}/ANSIconverter.js
+	${INSTALL} -m 644 ANSIconverter.js $(DESTDIR)${pkgdatadir}/ANSIconverter.js
 	${INSTALL} -m 644 autocorrect.js $(DESTDIR)${pkgdatadir}/autocorrect.js
 	${INSTALL} -m 755 pref.js $(DESTDIR)${pkgdatadir}/pref.js
 	${INSTALL} -m 644 avropref.ui $(DESTDIR)${pkgdatadir}/avropref.ui
